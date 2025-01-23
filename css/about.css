@@ -1,0 +1,78 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #160c3c; /*couleur arrière plan*/
+    color: #c80000;
+}
+
+/* Header et navigation */
+header {
+    background-color: #191331;
+    padding: 1.5rem 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fbeaafd8; /*couleur de la police*/
+    transition: color 0.3s ease; /* Transition fluide */
+}
+
+header nav ul li a:hover {
+    color: #fffde8; /* Couleur au survol */
+}
+
+/* Contenu principal */
+main {
+    display: flex; /* Positionne les éléments en ligne */
+    flex-direction: column; /* Empile le titre et la section texte/image verticalement */
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    padding: 2rem;
+    background-color: #160c3c; /* Fond sombre */
+    color: #c56600; 
+}
+
+/* Footer */
+footer {
+    background-color: #191331;
+    color: #fbeaafd8;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Colonne sur petits écrans */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .text-image-container {
+        flex-direction: column; /* Passe les éléments en colonne */
+    }
+
+    .text-image-container p {
+        max-width: 80%; /* Texte plus large sur petits écrans */
+        text-align: center; /* Centre le texte */
+        margin-bottom: 1rem; /* Ajoute un espace sous le paragraphe */
+    }
+
+    .text-image-container img {
+        max-width: 80%; /* Image plus grande sur petits écrans */
+    }
+}
