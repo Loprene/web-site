@@ -1,16 +1,17 @@
 /* Style général */
 body {
-    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #160c3c, #0f0828); /* Un seul dégradé appliqué au body */
     margin: 0;
     padding: 0;
-    background-color: #160c3c; /*couleur arrière plan*/
-    color: #c80000;
+    font-family: cursive;
+    color: #f19e3f;
 }
 
 /* Header et navigation */
 header {
-    background-color: #191331;
     padding: 1.5rem 0;
+    margin-bottom: 0;
+    background-color: #191331;
 }
 
 header nav ul {
@@ -26,7 +27,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fbeaafd8; /*couleur de la police*/
+    color: #fbeaafd8; /* Couleur de la police */
     transition: color 0.3s ease; /* Transition fluide */
 }
 
@@ -34,16 +35,118 @@ header nav ul li a:hover {
     color: #fffde8; /* Couleur au survol */
 }
 
+#book
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2000px; /* Permet de créer un effet 3D */
+    height: 10vh;
+}
+
+.page {
+    width: 400px;
+    height: 500px;
+    background: linear-gradient(to bottom, #e2a55e, #b36b00); /* Dégradé du haut (clair) vers le bas (foncé) */
+    color: white;
+    color: white;
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transform-origin: left;
+    transform: rotateY(0deg);
+    transition: transform 1s ease;
+    position: absolute;
+    backface-visibility: hidden; /* Cache le dos des pages */
+}
+
+.page.hidden {
+    display: none;
+}
+
+/* Pages spécifiques */
+#page1 {
+    z-index: 4;
+}
+
+#page2 {
+    z-index: 3;
+}
+
+#page3 {
+    z-index: 2;
+}
+
+#page4 {
+    z-index: 1;
+}
+
+/* Boutons pour naviguer */
+.nav-button {
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    background: linear-gradient(to bottom, #e2a55e, #b36b00);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button.left {
+    left: 30px;
+}
+
+.nav-button.right {
+    right: 30px;
+}
+
+/* Titre principal */
+h1 {
+    color: #a76112; /* Couleur du texte */
+    text-align: center; /* Centre le texte */
+    margin: 10; /* Supprime les marges */
+    padding: 1.5rem 0; /* Espacement interne */
+    font-size: 2.5rem; /* Taille du texte */
+}
+
+h2{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+p{
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+ul{
+    font-size: 24px;
+}
+
+li{
+    font-size: 24px;
+}
+
+a{
+    font-size: 24px;
+}
+
 /* Contenu principal */
 main {
-    display: flex; /* Positionne les éléments en ligne */
-    flex-direction: column; /* Empile le titre et la section texte/image verticalement */
-    align-items: center; /* Centre horizontalement */
-    justify-content: center; /* Centre verticalement */
-    height: 100vh; /* Prend toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    min-height: calc(100vh - 4rem); /* Ajuste la hauteur en fonction du header et du footer */
     padding: 2rem;
-    background-color: #160c3c; /* Fond sombre */
-    color: #c56600; 
+    color: #d3880f;
+    background: none; /* Supprime le fond de main pour éviter la duplication */
 }
 
 /* Footer */
@@ -58,21 +161,21 @@ footer {
 /* Responsiveness */
 @media (max-width: 768px) {
     main {
-        flex-direction: column; /* Colonne sur petits écrans */
+        flex-direction: column; /* Passe en colonne sur petits écrans */
         align-items: center; /* Centre les éléments */
     }
 
     .text-image-container {
-        flex-direction: column; /* Passe les éléments en colonne */
+        flex-direction: column;
     }
 
     .text-image-container p {
-        max-width: 80%; /* Texte plus large sur petits écrans */
-        text-align: center; /* Centre le texte */
-        margin-bottom: 1rem; /* Ajoute un espace sous le paragraphe */
+        max-width: 80%; /* Limite la largeur sur petits écrans */
+        text-align: center;
+        margin-bottom: 1rem;
     }
 
     .text-image-container img {
-        max-width: 80%; /* Image plus grande sur petits écrans */
+        max-width: 80%; /* Agrandit les images sur petits écrans */
     }
 }

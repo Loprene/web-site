@@ -1,16 +1,17 @@
 /* Style général */
 body {
-    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #160c3c, #0f0828); /* Un seul dégradé appliqué au body */
     margin: 0;
     padding: 0;
-    background-color: #160c3c; /*couleur arrière plan*/
-    color: #c80000;
+    font-family: cursive;
+    color: #f19e3f;
 }
 
 /* Header et navigation */
 header {
-    background-color: #191331;
     padding: 1.5rem 0;
+    margin-bottom: 0;
+    background-color: #191331;
 }
 
 header nav ul {
@@ -36,14 +37,14 @@ header nav ul li a:hover {
 
 /* Contenu principal */
 main {
-    display: flex; /* Positionne les éléments en ligne */
-    flex-direction: column; /* Empile le titre et la section texte/image verticalement */
-    align-items: center; /* Centre horizontalement */
-    justify-content: center; /* Centre verticalement */
-    height: 100vh; /* Prend toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    min-height: calc(100vh - 4rem); /* Ajuste la hauteur en fonction du header et du footer */
     padding: 2rem;
-    background-color: #160c3c; /* Fond sombre */
-    color: #c56600; 
+    color: #d3880f;
+    background: none; /* Supprime le fond de main pour éviter la duplication */
 }
 
 /* Titre centré */

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Accueil</title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav aria-label="Navigation principale">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="about.html">Qui suis-je</a></li>
@@ -18,39 +18,54 @@
             </ul>
         </nav>
     </header>
-        <h1>Qui suis-je</h1>
+    <h1>Qui suis-je</h1>
     
-
-    <main>
-        <section id="presentation">
-            <h2>Présentation</h2>
-            <p>
-                Je m'appelle <strong>SA IM Cheabuon</strong>. Mon parcours scolaire est à la fois pluridisciplinaire et généraliste, ce qui m'a permis d'acquérir une vision globale et des compétences variées. Passionné par l'informatique, j'ai décidé de consacrer une partie de mon temps libre à la création et au développement de ce site.
-            </p>
-        </section>
-
-        <section id="competence">
-            <h2>Mes connaissances</h2>
-            <ul>
-                <li>Modélisation des intéractions chimiques avec Gaussian 16</li>
-                <li>Connaître diverses langages informatiques telles que le C, Pyhton et Javascript</li>
-                <li>Tutorat et accompagnemnt scientifique</li>
-                <li>Maîtriser des outils bureaucratiques</li>
-            </ul>
-        </section>
-
-        <section id="hobbies">
-            <h2>Mes hobbies</h2>
-            <p>En dehors de mes études, je suis intéressé par l'astronomie, par les jeux vidéos ainsi et la modélisation 3D. Ces activités m'aident à équilibrer ma vie étudiante et à rester inspiré dans mon parcours.</p>
-        </section>
+    <main id="book">
+        <!-- Page 1 (Gauche) -->
+        <div class="page" id="page1">
+            <section id="presentation">
+                <h2>Présentation</h2>
+                <p>
+                    Je m'appelle <strong>SA IM Cheabuon</strong>. Mon parcours scolaire est à la fois pluridisciplinaire et généraliste, ce qui m'a permis d'acquérir une vision globale et des compétences variées. Passionné par l'informatique, j'ai décidé de consacrer une partie de mon temps libre à la création et au développement de ce site.
+                </p>
+            </section>
+        </div>
+    
+        <!-- Page 2 (Droite) -->
+        <div class="page" id="page2">
+            <section id="competence">
+                <h2>Mes connaissances</h2>
+                <ul>
+                    <li>Modélisation des interactions chimiques avec Gaussian 16</li>
+                    <li>Connaissances en divers langages informatiques tels que C, Python et JavaScript</li>
+                    <li>Tutorat et accompagnement scientifique</li>
+                    <li>Maîtrise des outils bureautiques</li>
+                </ul>
+            </section>
+        </div>
+    
+        <!-- Page 3 (Gauche) -->
+        <div class="page hidden" id="page3">
+            <section id="hobbies">
+                <h2>Mes hobbies</h2>
+                <p>
+                    En dehors de mes études, je suis passionné par l'astronomie, les jeux vidéo ainsi que la modélisation 3D. Ces activités m'aident à équilibrer ma vie étudiante et à rester inspiré dans mon parcours.
+                </p>
+            </section>
+        </div>
+    
+        <!-- Page 4 (Droite) -->
+        <div class="page hidden" id="page4">
+            <section id="mon-cv">
+                <h2>Mon CV</h2>
+                <a href="document/cv.pdf" class="btn" download="CV_Cheabuon_SA_IM.pdf">Télécharger mon CV</a>
+            </section>
+        </div>
     </main>
 
-    <section id="mon-cv">
-        <a href="cv_cheabuon_saim.pdf" class="btn" download="cv_cheabuon_saim.pdf">Télécharger mon CV</a>
-    </section>
     <footer>
         <p>&copy; Cheabuon SA IM</p>
     </footer>
+    <script src="js/about.js"></script>
 </body>
-
 </html>
