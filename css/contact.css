@@ -51,7 +51,7 @@ main {
 main h1 {
     font-size: 3rem; /* Taille du titre */
     font-weight: bold; /* Texte en gras */
-    text-align: left; /* Centre le texte */
+    text-align: corner; /* Centre le texte */
     margin-bottom: 1rem; /* Ajoute un espace sous le titre */
 }
 
