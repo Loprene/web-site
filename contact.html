@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Accueil</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="css/contact.css">
 </head>
 
@@ -20,32 +20,28 @@
     </header>
     <main>
         <h1>Mes réseaux</h1>
-        <a>
-            <div class="contact_link">
-                <p>
-                   Instagram
-                </p>
-                <a href="https://www.instagram.com/_.saimch._?igsh=ODkzazRsZWliNnQ1&utm_source=qr">
-                    <img src="images/logo_instagram.jpg" alt="Image d'instagram">
-                </a>
-            </div>
-        </a>
-
-        <a>
-            <div class="contact_link">
-                <p>
-                    Github
-                </p>
-                <a href="https://github.com/Loprene">
-                    <img src="images/logo_instagram.jpg" alt="Image github">
-                </a>
-            </div>
-        </a>
+        <div class="contact_link">
+            <p>Instagram</p>
+            <a href="https://www.instagram.com/_.saimch._?igsh=ODkzazRsZWliNnQ1&utm_source=qr">
+                <img src="images/logo_instagram.jpg" alt="Image d'instagram">
+            </a>
+        </div>
+        
+        <div class="contact_link">
+            <p>Github</p>
+            <a href="https://github.com/Loprene">
+                <img src="images/logo_github.png" alt="Image github">
+            </a>
+        </div>
+        
+        <div class="contact_link">
+            <p>Mail</p>
+            <a href="#" onclick="showEmail()">
+                <img id="emailImage" src="images/logo_email.png" alt="Image mail">
+            </a>
+            <p id="emailDisplay" style="margin-top: 10px; font-weight: bold;"></p>
+        </div>
     </main>
-    
-    <footer>
-        <p>&copy; Cheabuon SA IM</p>
-    </footer>
 </body>
 
 </html>
