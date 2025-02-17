@@ -1,0 +1,120 @@
+/* Style général */
+body {
+    background: linear-gradient(to bottom, #160c3c, #0f0828); /* Un seul dégradé appliqué au body */
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    color: #f19e3f;
+}
+
+/* Header et navigation */
+header {
+    padding: 1.5rem 0;
+    margin-bottom: 0;
+    background-color: #191331;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fbeaafd8; /*couleur de la police*/
+    transition: color 0.3s ease; /* Transition fluide */
+}
+
+header nav ul li a:hover {
+    color: #fffde8; /* Couleur au survol */
+}
+
+/* Contenu principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    min-height: calc(100vh - 4rem); /* Ajuste la hauteur en fonction du header et du footer */
+    padding: 2rem;
+    color: #d3880f;
+    background: none; /* Supprime le fond de main pour éviter la duplication */
+}
+
+/* Titre centré */
+main h1 {
+    font-size: 3rem; /* Taille du titre */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centre le texte */
+    margin-bottom: 1rem; /* Ajoute un espace sous le titre */
+}
+
+/* Section activité */
+.activity {
+    display: flex; /* Positionne le paragraphe et l'image côte à côte */
+    align-items: center; /* Aligne verticalement les éléments */
+    justify-content: center; /* Centre horizontalement */
+    gap: 2rem; /* Ajoute un espace entre le paragraphe et l'image */
+    margin-bottom: 2rem; /* Ajoute un espace sous chaque activité */
+}
+
+.activity p {
+    color: #f4dfa6;
+    max-width: 40%; /* Limite la largeur du paragraphe */
+    font-size: 1.5rem; /* Taille du texte */
+    line-height: 1.8; /* Espacement entre les lignes */
+    text-align: left; /* Texte aligné à gauche */
+    margin: 0; /* Supprime les marges inutiles */
+}
+
+.activity a img {
+    width: 100%; /* Permet à l'image d'occuper tout l'espace possible dans son conteneur */
+    max-width: 200px; /* Limite la taille maximale (modifie cette valeur si nécessaire) */
+    height: auto; /* Conserve les proportions de l'image */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(73, 16, 16, 0.5); /* Ajoute une ombre */
+    cursor: pointer; /* Affiche une main au survol */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+}
+
+.activity a img:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Ajoute une ombre au survol */
+}
+
+/* Footer */
+footer {
+    background-color: #191331;
+    color: #fbeaafd8;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Colonne sur petits écrans */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .activity {
+        flex-direction: column; /* Passe les éléments en colonne */
+    }
+
+    .activity p {
+        max-width: 80%; /* Texte plus large sur petits écrans */
+        text-align: center; /* Centre le texte */
+        margin-bottom: 1rem; /* Ajoute un espace sous le paragraphe */
+    }
+
+    .activity a img {
+        max-width: 80%; /* Image plus grande sur petits écrans */
+    }
+}
