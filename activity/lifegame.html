@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu de la Vie</title>
+  <link rel="stylesheet" href="../css/lifegame.css">
+</head>
+<body>
+  <h1>Jeu de la Vie</h1>
+  
+  <label>Vitesse: <input type="range" id="speedInput" min="50" max="1000" step="50" value="200"></label>
+  <label>Taille de la grille: <input type="range" id="gridSizeInput" min="5" max="50" step="5" value="20"></label>
+  <label>Patterns:
+    <select id="patternSelect">
+      <option value="none">Aucun</option>
+      
+      <option value="glider">Glider</option>
+      <option value="oscillator">Oscillateur</option>
+    </select>
+  </label>
+  
+  <button id="startBtn">Démarrer</button>
+  <button id="randomPatternBtn">Générer un pattern aléatoire</button>
+
+  
+  <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+  <script src="../js/lifegame.js"></script>
+</body>
+</html>
+
