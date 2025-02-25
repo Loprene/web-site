@@ -75,7 +75,7 @@ canvas.addEventListener("click", (e) => {
 startBtn.addEventListener("click", () => {
     running = !running;
     if (running) {
-        interval = setInterval(nextGeneration, speed);
+        interval = setInterval(nextGeneration, 1000 - speed);
         startBtn.textContent = "Pause";
     } else {
         clearInterval(interval);
@@ -87,7 +87,7 @@ speedInput.addEventListener("input", () => {
     speed = parseInt(speedInput.value);
     if (running) {
         clearInterval(interval);
-        interval = setInterval(nextGeneration, speed);
+        interval = setInterval(nextGeneration, 1000 - speed);
     }
 });
 
