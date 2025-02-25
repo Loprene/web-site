@@ -2,20 +2,21 @@ let currentPage = 1;
 const totalPages = 4;
 
 document.addEventListener("DOMContentLoaded", () => {
-    const leftButton = document.createElement("button");
-    leftButton.innerText = "Précédent";
-    leftButton.classList.add("nav-button", "left");
-    leftButton.addEventListener("click", turnLeft);
-
-    const rightButton = document.createElement("button");
-    rightButton.innerText = "Suivant";
-    rightButton.classList.add("nav-button", "right");
-    rightButton.addEventListener("click", turnRight);
-
-    document.body.appendChild(leftButton);
-    document.body.appendChild(rightButton);
-
     updatePages();
+
+    // Ajouter un écouteur d'événements sur chaque page
+    document.querySelectorAll(".page").forEach(page => {
+        page.addEventListener("click", (event) => {
+            const pageWidth = page.offsetWidth;
+            const clickX = event.offsetX;
+
+            if (clickX < pageWidth / 2) {
+                turnLeft(); // Clic à gauche → Page précédente
+            } else {
+                turnRight(); // Clic à droite → Page suivante
+            }
+        });
+    });
 });
 
 function turnLeft() {
@@ -41,3 +42,4 @@ function updatePages() {
         }
     });
 }
+

@@ -49,22 +49,95 @@ main {
 
 /* Titre centré */
 main h1 {
-    font-size: 3rem; /* Taille du titre */
+    font-size: 4rem; /* Taille du titre */
     font-weight: bold; /* Texte en gras */
-    text-align: center; /* Centre le texte */
-    margin-bottom: 1rem; /* Ajoute un espace sous le titre */
+    text-align: corner; /* Centre le texte */
+    margin-bottom: 2rem; /* Ajoute un espace sous le titre */
 }
 
-/* Section activité */
-.activity {
+/* Section paragraphe et image */
+.text-image-container {
     display: flex; /* Positionne le paragraphe et l'image côte à côte */
     align-items: center; /* Aligne verticalement les éléments */
     justify-content: center; /* Centre horizontalement */
     gap: 2rem; /* Ajoute un espace entre le paragraphe et l'image */
-    margin-bottom: 2rem; /* Ajoute un espace sous chaque activité */
 }
 
-.activity p {
+.text-image-container a {
+    display: inline-block; /* Le lien prend uniquement la taille de l'image */
+}
+
+.projet_link {
+    display: flex;
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between; /* Espacement équilibré */
+    gap: 2rem; /* Espacement entre le texte et l’image */
+    margin-bottom: 2rem; /* Espacement entre les projets */
+}
+
+.projet_link p {
+    font-size: 2rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centre le texte */
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, 
+        red, orange, yellow, green, blue, indigo, violet); /* Dégradé arc-en-ciel */
+    -webkit-background-clip: text; /* Applique le dégradé uniquement sur le texte */
+    -webkit-text-fill-color: transparent; /* Rend le texte transparent pour afficher le dégradé */
+}
+
+
+.projet_link a img {
+    width: auto;
+    max-width: 200px; /* Ajuste la taille */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(73, 16, 16, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projet_link a img:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Ajoute une ombre au survol */
+}
+
+.projet_link_2 {
+    display: flex;
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between; /* Espacement équilibré */
+    gap: 2rem; /* Espacement entre le texte et l’image */
+    margin-bottom: 2rem; /* Espacement entre les projets */
+}
+
+.projet_link_2 p {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #f8f8f8, #344ddb); /* Dégradé entre deux couleurs */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.projet_link_2 a img {
+    width: auto;
+    max-width: 200px; /* Ajuste la taille */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(73, 16, 16, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projet_link_2 a img:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Ajoute une ombre au survol */
+}
+
+/* Paragraphe à gauche */
+.text-image-container p {
     color: #f4dfa6;
     max-width: 40%; /* Limite la largeur du paragraphe */
     font-size: 1.5rem; /* Taille du texte */
@@ -73,20 +146,17 @@ main h1 {
     margin: 0; /* Supprime les marges inutiles */
 }
 
-.activity a img {
-    width: 100%; /* Permet à l'image d'occuper tout l'espace possible dans son conteneur */
-    max-width: 200px; /* Limite la taille maximale (modifie cette valeur si nécessaire) */
+/* Image à droite */
+.text-image-container img {
+    flex-shrink: 0; /* Empêche l'image de rétrécir */
+    max-width: 20%; /* Limite la taille de l'image */
     height: auto; /* Conserve les proportions de l'image */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 6px rgba(73, 16, 16, 0.5); /* Ajoute une ombre */
+    border-radius: 8px; /* Coins légèrement arrondis */
+    box-shadow: 0 4px 6px rgba(73, 16, 16, 0.5); /* Ajoute une ombre pour un effet esthétique */
     cursor: pointer; /* Affiche une main au survol */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet fluide */
 }
 
-.activity a img:hover {
-    transform: scale(1.05); /* Agrandit légèrement l'image */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Ajoute une ombre au survol */
-}
 
 /* Footer */
 footer {
@@ -99,22 +169,16 @@ footer {
 
 /* Responsiveness */
 @media (max-width: 768px) {
-    main {
-        flex-direction: column; /* Colonne sur petits écrans */
+    .projet_link {
+        flex-direction: column; /* Passe les éléments en colonne */
         align-items: center; /* Centre les éléments */
     }
 
-    .activity {
-        flex-direction: column; /* Passe les éléments en colonne */
+    .projet_link p {
+        text-align: center;
     }
 
-    .activity p {
-        max-width: 80%; /* Texte plus large sur petits écrans */
-        text-align: center; /* Centre le texte */
-        margin-bottom: 1rem; /* Ajoute un espace sous le paragraphe */
-    }
-
-    .activity a img {
-        max-width: 80%; /* Image plus grande sur petits écrans */
+    .projet_link a img {
+        max-width: 80%; /* Image plus grande sur mobile */
     }
 }
