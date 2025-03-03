@@ -1,0 +1,295 @@
+/* 🌈 Animation de fond avec 7 couleurs */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+/* 📌 Centrage du contenu */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* 🌈 Animation de texte arc-en-ciel */
+@keyframes rainbowText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.rainbow-text {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowText 6s linear infinite;
+}
+
+/* 🎬 Vidéo */
+.video-container {
+    margin-top: 2rem;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 📥 Section de téléchargement (Visible seulement si connecté) */
+#download-section {
+    display: none;
+    margin-top: 2rem;
+}
+
+/* 🔘 Bouton de téléchargement */
+.download-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff5733, #ffbd69);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.download-button:hover {
+    background: linear-gradient(45deg, #ffbd69, #ff5733);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* 🔐 Formulaire de connexion */
+#login-section {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    text-align: center;
+}
+
+#login-section input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#login-section button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: green;
+    color: white;
+    font-weight: bold;
+}
+
+#login-section button:hover {
+    background: limegreen;
+}
+
+#error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* 🔘 Section utilisateur connecté */
+#user-section {
+    display: none;
+    margin-top: 1rem;
+}
+
+#user-section button {
+    background: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#user-section button:hover {
+    background: darkred;
+}
+
+/* 💬 Section des commentaires */
+.review-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* 📝 Titre des commentaires */
+.review-section h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* 📌 Zone des commentaires */
+#reviews-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* 💬 Style des commentaires */
+.review {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    color: white;
+}
+
+/* 📝 Formulaire d'ajout de commentaire (Visible seulement si connecté) */
+#review-form {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#review-form input {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* 🔘 Bouton d'envoi */
+#review-form button {
+    background: linear-gradient(45deg, #ff5733, #ffbd69);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#review-form button:hover {
+    background: linear-gradient(45deg, #ffbd69, #ff5733);
+    transform: scale(1.05);
+}
+
+/* 🔒 Section Admin (Modération) */
+#pending-reviews {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* ⚡ Boutons Approve/Delete */
+.approve-btn, .delete-btn {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.approve-btn {
+    background: green;
+    color: white;
+}
+
+.approve-btn:hover {
+    background: limegreen;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* 🔑 Formulaire d'inscription et connexion */
+#register-section, #login-section {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    text-align: center;
+}
+
+#register-section input, #login-section input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#register-section button, #login-section button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: green;
+    color: white;
+    font-weight: bold;
+}
+
+#register-section button:hover, #login-section button:hover {
+    background: limegreen;
+}
+
+#error-message, #reg-error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* 🔘 Lien entre inscription et connexion */
+a {
+    color: yellow;
+    cursor: pointer;
+}

@@ -3,11 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Mantis</title>
+    <title>Monte Carlo - Mantis</title>
+    <link rel="stylesheet" href="css/marketing.css">
 </head>
-
 <body>
-    <p>Hello World !</p>
-</body>
 
+    <main>
+        <h1 class="rainbow-text">Mantis Gameplay</h1>
+        
+        <!-- Vidéo -->
+        <div class="video-container">
+            <video autoplay muted loop controls>
+                <source src="game/gameplay.webm" type="video/webm">
+                Your navigator does not support video playback.
+            </video>
+        </div>
+
+        <!-- Formulaire d'inscription -->
+        <div id="register-section">
+            <h2>Sign Up</h2>
+            <input type="text" id="reg-username" placeholder="Username">
+            <input type="password" id="reg-password" placeholder="Password">
+            <input type="password" id="reg-confirm-password" placeholder="Confirm Password">
+            <button onclick="register()">Register</button>
+            <p id="reg-error-message"></p>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+        </div>
+
+        <!-- Formulaire de connexion -->
+        <div id="login-section" style="display: none;">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Enter your username">
+            <input type="password" id="login-password" placeholder="Enter your password">
+            <button onclick="login()">Login</button>
+            <p id="login-error-message"></p>
+            <p>Don't have an account? <a href="#" onclick="showRegister()">Sign up here</a></p>
+        </div>
+
+        <!-- Section pour l'utilisateur connecté -->
+        <div id="user-section" style="display: none;">
+            <p>Welcome, <span id="user-role"></span>!</p>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <!-- Section de téléchargement (Visible seulement si connecté) -->
+        <div id="download-section" style="display: none;">
+            <p>Download</p>
+            <a href="game/mantis.zip" class="download-button">Download</a>
+        </div>
+
+        <!-- Section Commentaires & Avis -->
+        <div class="review-section">
+            <h2>Commentary and Review</h2>
+
+            <!-- Avis en attente (Visible seulement pour Admin) -->
+            <div id="pending-reviews" style="display: none;">
+                <h3>Pending Reviews</h3>
+                <div id="pending-reviews-container"></div>
+            </div>
+
+            <!-- Avis approuvés -->
+            <div id="approved-reviews">
+                <h3>Approved Reviews</h3>
+                <div id="reviews-container"></div>
+            </div>
+
+            <!-- Formulaire d'ajout de commentaire (Visible seulement si connecté) -->
+            <form id="review-form" style="display: none;">
+                <input type="text" id="comment-text" placeholder="Your comment" required>
+                <button type="submit">Post Comment</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/marketing.js"></script>
+
+</body>
 </html>

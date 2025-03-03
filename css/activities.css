@@ -157,6 +157,80 @@ main h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet fluide */
 }
 
+/* Section des commentaires */
+.review-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Titre des commentaires */
+.review-section h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* Zone des commentaires */
+#reviews-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Style des commentaires */
+.review {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    color: white;
+}
+
+/* Formulaire d'ajout de commentaire */
+#review-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Champs de saisie */
+#review-form input, #review-form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Bouton d'envoi */
+#review-form button {
+    background: linear-gradient(45deg, #ff5733, #ffbd69);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#review-form button:hover {
+    background: linear-gradient(45deg, #ffbd69, #ff5733);
+    transform: scale(1.05);
+}
+
 
 /* Footer */
 footer {

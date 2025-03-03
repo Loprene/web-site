@@ -1,0 +1,4 @@
+let users = JSON.parse(localStorage.getItem("users")) || {};
+users["admin"] = "admin123"; // Définis un admin avec mot de passe "admin123"
+localStorage.setItem("users", JSON.stringify(users));
+console.log("Admin created successfully!");
