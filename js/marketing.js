@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const reviewContainer = document.getElementById("reviews-container");
     
     let users = JSON.parse(localStorage.getItem("users")) || {};
+    // Vérifie si un compte admin existe déjà, sinon le créer
+    if (!users["admin"]) {
+        users["admin"] = { password: "admin123", role: "admin" };
+        localStorage.setItem("users", JSON.stringify(users));
+    }
+
     let role = localStorage.getItem("role");
     let approvedReviews = JSON.parse(localStorage.getItem("approvedReviews")) || [];
     let pendingReviews = JSON.parse(localStorage.getItem("pendingReviews")) || [];
